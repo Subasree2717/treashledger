@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 258 89% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 258 89% 96%;
+    --accent-foreground: 258 89% 66%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 258 89% 66%;
+
+    --radius: 1.25rem;
+
+    --chart-1: 258 89% 66%;
+    --chart-2: 280 80% 65%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 72% 51%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 258 89% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 258 89% 66%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 258 89% 66%;
+  }
+
+  .dark {
+    --background: 222 39% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 47% 15%;
+    --muted-foreground: 215 14% 65%;
+
+    --accent: 258 90% 15%;
+    --accent-foreground: 258 90% 66%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 80% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 222 35% 17%;
+    --input: 222 35% 17%;
+    --ring: 258 90% 66%;
+
+    --chart-1: 258 90% 70%;
+    --chart-2: 280 75% 70%;
+    --chart-3: 199 80% 55%;
+    --chart-4: 38 80% 55%;
+    --chart-5: 0 65% 55%;
+
+    --sidebar-background: 222 41% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 258 90% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 15%;
+    --sidebar-accent-foreground: 258 90% 66%;
+    --sidebar-border: 222 35% 17%;
+    --sidebar-ring: 258 90% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 shadow-xl;
+  }
+
+  .apple-glass {
+    @apply bg-card/40 backdrop-blur-2xl border border-white/10 shadow-2xl;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 30px hsla(var(--primary), 0.15), 0 0 60px hsla(var(--primary), 0.08);
+  }
+
+  .glow-primary-strong {
+    box-shadow: 0 0 50px hsla(var(--primary), 0.25), 0 0 100px hsla(var(--primary), 0.12);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100;
+  }
+
+  .brand-gradient {
+    background: linear-gradient(135deg, #0B0F2A 0%, #1A1446 50%, #2D1B69 100%);
+  }
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, #0B0F2A 0%, #1A1446 50%, #2D1B69 100%);
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary to-purple-600;
+  }
+
+  .btn-glow {
+    @apply relative overflow-hidden;
+    box-shadow: 0 0 20px hsla(var(--primary), 0.35);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 30px hsla(var(--primary), 0.5);
+  }
+
+  /* 3D Flip Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
