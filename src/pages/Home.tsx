@@ -10,6 +10,9 @@ import ReviewSection from '@/components/ReviewSection';
 import ctaBg from "@/assets/Minimalist Finance Planning_ Digital Budget Tracker & Wealth Growth Inspiration.jpeg";
 import heroVideo from "@/assets/hero-bg-v4.mp4";
 import heroPoster from "@/assets/finance-hero.png";
+import dashboard1 from "@/assets/dashboard1.png";
+import dashboard2 from "@/assets/dashboard2.png";
+import dashboard3 from "@/assets/dashboard3.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -96,21 +99,21 @@ const steps = [
     title: 'Connect',
     desc: 'Sign up and start logging your income and expenses in seconds with our high-speed transaction engine.',
     icon: LinkIcon,
-    img: '/src/assets/dashboard1.png'
+    img: dashboard1
   },
   {
     num: '02',
     title: 'Analyze',
     desc: 'Get powerful insights with charts, trends, and AI-driven breakdowns to understand your spending behavior.',
     icon: BarChart3,
-    img: '/src/assets/dashboard2.png'
+    img: dashboard2
   },
   {
     num: '03',
     title: 'Optimize',
     desc: 'Set budget goals, monitor health scores, and grow your savings with our predictive intelligence tools.',
     icon: TrendingUp,
-    img: '/src/assets/dashboard3.png'
+    img: dashboard3
   },
 ];
 
